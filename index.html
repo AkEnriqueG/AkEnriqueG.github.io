@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Versión 2.11.1 compatible -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <!-- Biblioteca particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
   <!-- Contenedor de partículas -->
@@ -32,28 +32,89 @@
     </section>
   </main>
 
-  <!-- Inicializar partículas -->
+  <!-- Configuración e inicialización de partículas -->
   <script>
-    tsParticles.load("particles-js", {
-      fullScreen: { enable: true },
-      particles: {
-        number: { value: 80 },
-        color: { value: "#00ffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.2 },
-        size: { value: 2 },
-        move: { enable: true, speed: 0.5 },
-        links: {
-          enable: true,
-          distance: 120,
-          color: "#00ffff",
-          opacity: 0.2,
-          width: 1
-        }
-      },
-      background: {
-        color: "#0a0a0a"
-      }
+    document.addEventListener('DOMContentLoaded', function() {
+      particlesJS("particles-js", {
+        particles: {
+          number: { 
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800
+            } 
+          },
+          color: { value: "#00ffff" },
+          shape: { type: "circle" },
+          opacity: {
+            value: 0.5,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 0.1,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#00ffff",
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "bounce",
+            bounce: false,
+            attract: {
+              enable: true,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "grab"
+            },
+            onclick: {
+              enable: true,
+              mode: "push"
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1
+              }
+            },
+            push: {
+              particles_nb: 4
+            }
+          }
+        },
+        retina_detect: true
+      });
     });
   </script>
 </body>
