@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio</title>
+  <title>Portafolio Espacial</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Biblioteca particles.js -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- versión 2.11.1 para evitar bugs -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-  <!-- Contenedor de partículas -->
+  <!-- Partículas y estrellas -->
   <div id="particles-js"></div>
+  <div class="stars"></div>
 
   <main class="content">
     <h1>Luis</h1>
-    <p class="subtitulo">Programador</p>
+    <p class="subtitulo">Programador del Cosmos</p>
 
     <section class="galeria">
-      <!-- Galería 3x3 -->
       <div class="grid">
         <div class="item">Proyecto 1</div>
         <div class="item">Proyecto 2</div>
@@ -32,89 +32,25 @@
     </section>
   </main>
 
-  <!-- Configuración e inicialización de partículas -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      particlesJS("particles-js", {
-        particles: {
-          number: { 
-            value: 80,
-            density: {
-              enable: true,
-              value_area: 800
-            } 
-          },
-          color: { value: "#00ffff" },
-          shape: { type: "circle" },
-          opacity: {
-            value: 0.5,
-            random: true,
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.1,
-              sync: false
-            }
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: {
-              enable: true,
-              speed: 2,
-              size_min: 0.1,
-              sync: false
-            }
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#00ffff",
-            opacity: 0.4,
-            width: 1
-          },
-          move: {
-            enable: true,
-            speed: 1,
-            direction: "none",
-            random: true,
-            straight: false,
-            out_mode: "bounce",
-            bounce: false,
-            attract: {
-              enable: true,
-              rotateX: 600,
-              rotateY: 1200
-            }
-          }
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: {
-              enable: true,
-              mode: "grab"
-            },
-            onclick: {
-              enable: true,
-              mode: "push"
-            },
-            resize: true
-          },
-          modes: {
-            grab: {
-              distance: 140,
-              line_linked: {
-                opacity: 1
-              }
-            },
-            push: {
-              particles_nb: 4
-            }
-          }
-        },
-        retina_detect: true
-      });
+    tsParticles.load("particles-js", {
+      fullScreen: { enable: true },
+      background: { color: "#0a0a0a" },
+      particles: {
+        number: { value: 100 },
+        color: { value: "#00ffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: { min: 1, max: 3 } },
+        move: { enable: true, speed: 0.6 },
+        links: {
+          enable: true,
+          distance: 100,
+          color: "#00ffff",
+          opacity: 0.2,
+          width: 1
+        }
+      }
     });
   </script>
 </body>
