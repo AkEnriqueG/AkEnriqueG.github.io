@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi nueva página</title>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-  <h1>¡Hola mundo!</h1>
-  <p>Esta es mi nueva página con GitHub Pages.</p>
+  <div id="particles-js"></div>
+
+  <main class="content">
+    <h1>Luis</h1>
+    <p class="subtitulo">Programador</p>
+
+    <section class="galeria">
+      <!-- Galería 3x3 -->
+      <div class="grid">
+        <div class="item">Proyecto 1</div>
+        <div class="item">Proyecto 2</div>
+        <div class="item">Proyecto 3</div>
+        <div class="item">Proyecto 4</div>
+        <div class="item">Proyecto 5</div>
+        <div class="item">Proyecto 6</div>
+        <div class="item">Proyecto 7</div>
+        <div class="item">Proyecto 8</div>
+        <div class="item">Proyecto 9</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    tsParticles.load("particles-js", {
+      fullScreen: { enable: true },
+      particles: {
+        number: { value: 80 },
+        color: { value: "#00ffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.2 },
+        size: { value: 2 },
+        move: { enable: true, speed: 0.5 },
+        links: {
+          enable: true,
+          distance: 120,
+          color: "#00ffff",
+          opacity: 0.2,
+          width: 1
+        }
+      },
+      background: {
+        color: "#0a0a0a"
+      }
+    });
+  </script>
 </body>
 </html>
