@@ -3,55 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio Espacial</title>
+  <title>Portafolio Hacker Cósmico</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- versión 2.11.1 para evitar bugs -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-  <!-- Partículas y estrellas -->
-  <div id="particles-js"></div>
-  <div class="stars"></div>
-
   <main class="content">
     <h1>Luis</h1>
-    <p class="subtitulo">Hacker Programador</p>
+    <p class="subtitulo">Programador Hacker</p>
 
     <section class="galeria">
       <div class="grid">
-        <div class="item">Proyecto 1</div>
-        <div class="item">Proyecto 2</div>
-        <div class="item">Proyecto 3</div>
-        <div class="item">Proyecto 4</div>
-        <div class="item">Proyecto 5</div>
-        <div class="item">Proyecto 6</div>
-        <div class="item">Proyecto 7</div>
-        <div class="item">Proyecto 8</div>
-        <div class="item">Proyecto 9</div>
+        <!-- Proyecto -->
+        <div class="item">
+          <div class="preview"></div>
+          <div class="info">
+            <h3>Proyecto 1</h3>
+            <p>Descripción del proyecto.</p>
+            <div class="tags">
+              <span>#IA</span>
+              <span>#Terminal</span>
+              <span>#Linux</span>
+            </div>
+            <div class="acciones">
+              <button>Botón 1</button>
+              <button>Botón 2</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="preview"></div>
+          <div class="info">
+            <h3>Proyecto 2</h3>
+            <p>Exploración interdimensional mediante código.</p>
+            <div class="tags">
+              <span>#A1</span>
+              <span>#API</span>
+              <span>#Web</span>
+            </div>
+            <div class="acciones">
+              <button>Ver</button>
+              <button>GitHub</button>
+            </div>
+          </div>
+        </div>
+        <!-- Agrega 7 más si lo deseas -->
       </div>
     </section>
   </main>
-
-  <script>
-    tsParticles.load("particles-js", {
-      fullScreen: { enable: true },
-      background: { color: "#0a0a0a" },
-      particles: {
-        number: { value: 100 },
-        color: { value: "#00ffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.3 },
-        size: { value: { min: 1, max: 3 } },
-        move: { enable: true, speed: 0.6 },
-        links: {
-          enable: true,
-          distance: 100,
-          color: "#00ffff",
-          opacity: 0.2,
-          width: 1
-        }
-      }
-    });
-  </script>
 </body>
 </html>
